@@ -5,12 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Card card = new Card();
-        card.Title = "What is the capital of BG?";
-        card.Text = "Sofia";
-        card.Category = "Geography";
-
-        DisplayCard(card);
+        CardService cardService = new CardService();
+        var currentCard = cardService.GetNextCard();
+        DisplayCard(currentCard);
     }
 
     public static void DisplayCard(Card card)
