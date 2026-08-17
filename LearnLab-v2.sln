@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnLab-v2", "LearnLab-v2\LearnLab-v2.csproj", "{41C73A93-5022-45EF-8199-3C88A0F33ED6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{8CDC9251-841F-4B4F-A241-ED6EEDE8EE5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{DC654408-2A96-4A0A-95E4-1E595102D5CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{41C73A93-5022-45EF-8199-3C88A0F33ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41C73A93-5022-45EF-8199-3C88A0F33ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41C73A93-5022-45EF-8199-3C88A0F33ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41C73A93-5022-45EF-8199-3C88A0F33ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CDC9251-841F-4B4F-A241-ED6EEDE8EE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDC9251-841F-4B4F-A241-ED6EEDE8EE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDC9251-841F-4B4F-A241-ED6EEDE8EE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDC9251-841F-4B4F-A241-ED6EEDE8EE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC654408-2A96-4A0A-95E4-1E595102D5CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC654408-2A96-4A0A-95E4-1E595102D5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC654408-2A96-4A0A-95E4-1E595102D5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC654408-2A96-4A0A-95E4-1E595102D5CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
