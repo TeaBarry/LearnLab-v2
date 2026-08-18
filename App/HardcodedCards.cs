@@ -2,11 +2,13 @@ namespace App;
 
 public class HardcodedCards
 {
-    // Card card = new Card();
-    //     
-    // card.Title = "What is the capital of BG?";
-    // card.Text = "Sofia";
-    // card.Category = "Geography";
-    //     
-    // return card;
+  public List<Card> CreateCards()
+  { 
+    List<Card> cards = new List<Card>();
+  
+    cards.Add(new Card() {Title = "What is the capital of BG?", Text = "Sofia"});
+    cards.Add(new Card() {Title = "What is the capital of Luxembourg?", Text = "Luxembourg"});
+
+    return cards;
+  }
 }

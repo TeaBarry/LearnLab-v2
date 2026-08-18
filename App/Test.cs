@@ -1,10 +1,22 @@
 ﻿
+using System.Reflection.Metadata.Ecma335;
+
 namespace App;
 
 public class Test
 {
-    public void DoSomething()
+    private List<Card> _allCards;
+    public Card CheckIfHardCodedCardsIsEmpty()
     {
-        Console.WriteLine("Hehe");
+        HardcodedCards hardcodedCards = new HardcodedCards();
+        _allCards = hardcodedCards.CreateCards();
+        bool isEmpty = !_allCards.Any();
+        if (isEmpty)
+        {
+            throw new ArgumentException(String.Format("The list of cards can not be empty!"));
+        }
+
+        return null;
+
     }
 }
