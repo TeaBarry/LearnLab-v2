@@ -6,12 +6,11 @@ class Program
     static void Main(string[] args)
     {
         CardService cardService = new CardService();
-        Test test = new Test();
-        test.CheckIfHardCodedCardsIsEmpty();
         while (true)
         {
             var currentCard = cardService.GetNextCard();
             DisplayCard(currentCard);
+            Console.WriteLine("Press Backspace if you wish to Exit!");
             if (Console.ReadKey().Key == ConsoleKey.Backspace)
             {
                 break;
@@ -22,7 +21,7 @@ class Program
     public static void DisplayCard(Card card)
     {
         Console.WriteLine(" ");
-        Console.WriteLine("Press Enter to reveal the answer! (Press Backspace to Exit)");
+        Console.WriteLine("Press Enter to reveal the answer!");
         Console.WriteLine(" ");
         Console.WriteLine(card.Title);
         Console.ReadKey();
