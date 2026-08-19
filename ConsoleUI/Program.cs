@@ -10,8 +10,10 @@ class Program
         {
             var currentCard = cardService.GetNextCard();
             DisplayCard(currentCard);
-            Console.WriteLine("Press Backspace if you wish to Exit!");
-            if (Console.ReadKey().Key == ConsoleKey.Backspace)
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("(Press any key to continue... Press Backspace if you wish to Exit!)");
+            Console.ResetColor();
+            if (Console.ReadKey(true).Key == ConsoleKey.Backspace)
             {
                 break;
             }
@@ -21,10 +23,21 @@ class Program
     public static void DisplayCard(Card card)
     {
         Console.WriteLine(" ");
-        Console.WriteLine("Press Enter to reveal the answer!");
+        Console.WriteLine("Press any key to reveal the answer!");
         Console.WriteLine(" ");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════╗");
+        Console.WriteLine("║                                 Question                                ║");
+        Console.WriteLine("║                    (Press any key to reveal the answer)                 ║");
+        Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════╝");
+        Console.ResetColor();
         Console.WriteLine(card.Title);
-        Console.ReadKey();
+        Console.ReadKey(true);
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════╗");
+        Console.WriteLine("║                                  Answer                                 ║");
+        Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════╝");
+        Console.ResetColor();
         Console.WriteLine(card.Text);
     }
 }
