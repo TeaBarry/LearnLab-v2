@@ -5,7 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        CardService cardService = new CardService();
+        ICardLoader cardLoader = new HardcodedCards();
+        var cardService = new CardService(cardLoader);
         while (true)
         {
             var currentCard = cardService.GetNextCard();

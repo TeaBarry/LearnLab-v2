@@ -1,14 +1,26 @@
 namespace App;
 
-public class HardcodedCards
+public class HardcodedCards : ICardLoader
 {
-  public List<Card> CreateCards()
-  { 
-    List<Card> cards = new List<Card>();
-  
-    cards.Add(new Card() {Title = "What is the capital of BG?", Text = "Sofia"});
-    cards.Add(new Card() {Title = "What is the capital of Luxembourg?", Text = "Luxembourg"});
+  private readonly List<Card> _allCardsList = new()
+  {
+    new Card
+    {
+      Title = "What is the Capital of BG?",
+      Text = "Sofia",
+      Category = "Geography"
+    },
+    new Card
+    {
+      Title = "What is the Capital of Luxembourg",
+      Text = "Luxembourg",
+      Category = "Geography"
+    }
+  };
 
-    return cards;
+  public IReadOnlyList<Card> GetAllCards()
+  {
+    return _allCardsList;
   }
+  
 }

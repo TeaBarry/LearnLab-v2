@@ -2,23 +2,14 @@ namespace App;
 
 public class CardService
 {
-    private List<Card> _allCards; //field
+    //private List<Card> _allCards; //field
+    private IReadOnlyList<Card> _allCards;
     private int _currentIndex = 0;
 
-    public CardService() // constructor
+    public CardService(ICardLoader cardLoader) // constructor
     {
-        // init allcards property
-
-        HardcodedCards hardcodedCards = new HardcodedCards();
+        _allCards = cardLoader.GetAllCards();        
         
-        _allCards = hardcodedCards.CreateCards();
-        
-        bool isEmpty = !_allCards.Any();
-        if (isEmpty)
-        {
-            throw new ArgumentException(String.Format("The list of cards can not be empty!"));
-        }
-
     }
     public Card GetNextCard()
     {
